@@ -56,4 +56,4 @@ ENTRYPOINT ["/opt/start.sh"]
 
 CMD ["asterisk", "-vvvdddf", "-T", "-p"]
 
-LABEL modules="ubuntu:18.04,asterisk:${ASTERISK_VER}
+LABEL modules="ubuntu:18.04,asterisk:${ASTERISK_VER}"
