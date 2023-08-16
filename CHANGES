@@ -1,4 +1,11 @@
-Changes for Asterisk UniMRCP Modules 1.10.0
+Changes for Asterisk UniMRCP Modules 1.9.2
+
+1. Dialplan Applications (app_unimrcp.so)
+
+    * Fix Verify from buffer parameter name
+
+
+Changes for Asterisk UniMRCP Modules 1.9.1
 
 1. Generic Speech Recognition API (res_speech_unimrcp.so)
 
@@ -6,34 +13,18 @@ Changes for Asterisk UniMRCP Modules 1.10.0
 
 2. Dialplan Applications (app_unimrcp.so)
 
-  2.1. MRCPSynth()
-
-    * If channel state is not SPEECH_CHANNEL_READY, wait for completion of the previous request
-      before proceeding with the new one (applicable to persistent MRCP sessions).
-
-  2.2. MRCPRecog()
-
-    * If channel state is not SPEECH_CHANNEL_READY, wait for completion of the previous request
-      before proceeding with the new one (applicable to persistent MRCP sessions).
-
-  2.3. SynthAndRecog()
-
-    * If channel state is not SPEECH_CHANNEL_READY, wait for completion of the previous request
-      before proceeding with the new one (applicable to persistent MRCP sessions).
-
-  2.4. Framework
-
-    * N/A.
+    * Added MRCPVerif and MRCPRecogVerif (with Verify from buffer)
+    * Channel-Id is reused when the applications persist (MRCPRecog and MRCPVerif)
+    * Refactor for common code reuse between applications
+    * Unimrcp session and DTMF Generator belong to APP session
 
 3. Miscellaneous
 
-    * Added support for UniMRCP 1.8.0.
-    * Added support for G722.
-
+    * Test automation
 
 Changes for Asterisk UniMRCP Modules 1.9.0
 
-1. Generic Speech Recognition API (res_speech_unimrcp.so)
+2. Dialplan Applications (app_unimrcp.so)
 
     * N/A.
 
