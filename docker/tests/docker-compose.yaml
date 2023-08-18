@@ -1,5 +1,5 @@
 version: '3.9'
- command: ["olaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]
+ 
 networks:
   default:
     ipam:
@@ -8,7 +8,7 @@ networks:
         gateway: ${ASTERISK_SUBNET}.1
     name: asterisk_test
     driver: bridge
- command: ["olaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1a1"]
+ 
 services:
   asterisk-test:
     profiles: ["test"]
@@ -27,6 +27,7 @@ services:
         ipv4_address: ${ASTERISK_SUBNET}.3
     working_dir: /test
     entrypoint: bash -c "sleep 10 && $RUN_TEST"
+    command: ["olaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]  
     depends_on:
       - asterisk-unimrcp
   asterisk-unimrcp:
